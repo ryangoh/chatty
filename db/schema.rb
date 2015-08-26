@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(version: 20150826011312) do
   enable_extension "plpgsql"
 
   create_table "rooms", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string   "message"
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
