@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<input id="message_input" type="text" name="name" value=""></input>
+<button type="button" name="button" onclick="trigger()">Send</button>
+
+<div class="content">
+  <ul>
+    <% @rooms.each do |room| %>
+      <li><%= room.message %> <sup><%# room.number %></sup> <%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+      <div class="additional_content">
+
+      </div>
+  </ul>
+</div>
